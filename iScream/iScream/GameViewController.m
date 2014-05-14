@@ -8,42 +8,42 @@
 
 #import "GameViewController.h"
 
-@interface GameViewController ()
+#import "UIFacialGestureRecognizer.h"
+
+@interface GameViewController () <UIGestureRecognizerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *leftView;
+@property (weak, nonatomic) IBOutlet UIView *rightView;
 
 @end
 
 @implementation GameViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+#pragma mark - Actions
+- (IBAction) faceRecognized: (UIFacialGestureRecognizer*) sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateRecognized:
+        {
+            NSLog(@"VC: %d | %d", sender.hasLeftEye, sender.hasRightEye);
+            self.leftView.backgroundColor = sender.hasLeftEye ? [UIColor blackColor] : [UIColor whiteColor];
+            self.rightView.backgroundColor = [sender hasRightEye] ? [UIColor blackColor] : [UIColor whiteColor];
+            break;
+        }
+        default:
+            break;
     }
-    return self;
 }
 
+#pragma mark - UIViewController
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIFacialGestureRecognizer* facialRecognizer = [[UIFacialGestureRecognizer alloc] initWithTarget: self
+                                                                                             action: @selector(faceRecognized:)];
+    facialRecognizer.delegate = self;
+    [self.view addGestureRecognizer: facialRecognizer];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

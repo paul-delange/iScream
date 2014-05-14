@@ -10,4 +10,7 @@
 
 @interface UIFacialGestureRecognizer : UIGestureRecognizer
 
+@property (assign, readonly) BOOL hasRightEye;
+@property (assign, readonly) BOOL hasLeftEye;
+
 @end

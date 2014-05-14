@@ -7,17 +7,17 @@
 //
 
 #import "FaceObject.h"
-#import "EyeObject.h"
+
+// For an explanation of which cascade to use:
+//      http://opencv-users.1802565.n2.nabble.com/with-OpenCV-haarcascades-can-i-detect-only-open-eye-or-closed-eye-td7534953.html
 
 static cv::CascadeClassifier*   _leftEyeClassifier = new cv::CascadeClassifier([[[NSBundle mainBundle] pathForResource: @"haarcascade_lefteye_2splits" ofType: @"xml"] UTF8String]);
 static cv::CascadeClassifier*   _rightEyeClassifier = new cv::CascadeClassifier([[[NSBundle mainBundle] pathForResource: @"haarcascade_righteye_2splits" ofType: @"xml"] UTF8String]);
+static cv::CascadeClassifier*   _openEyeClassifier = new cv::CascadeClassifier([[[NSBundle mainBundle] pathForResource: @"haarcascade_eye_tree_eyeglasses" ofType: @"xml"] UTF8String]);
 
-static cv::Rect CVRectZero = cv::Rect(0,0,0,0);
+static cv::Rect const CVRectZero = cv::Rect(0,0,0,0);
 
 @interface FaceObject ()
-
-@property (strong) EyeObject* leftEye;
-@property (strong) EyeObject* rightEye;
 
 @end
 
@@ -31,11 +31,11 @@ static cv::Rect CVRectZero = cv::Rect(0,0,0,0);
     
     std::vector<cv::Rect> eyes;
     classifier->detectMultiScale(image,
-                                     eyes,
-                                     scaleFactor,
-                                     1,
-                                     flags,
-                                     minimumSize);
+                                 eyes,
+                                 scaleFactor,
+                                 1,
+                                 flags,
+                                 minimumSize);
     for(size_t i = 0;i<eyes.size();i++) {
         return eyes[i];
     }
@@ -43,151 +43,37 @@ static cv::Rect CVRectZero = cv::Rect(0,0,0,0);
     return CVRectZero;
 }
 
-- (NSArray*) eyesInImage: (const cv::Mat&) image {
-    
-    int width = floorf(image.cols/2.);
+- (BOOL) leftEyeInImage: (const cv::Mat&) image {
+    int width = floorf(image.cols/4.);
     int height = floorf(image.rows/2.);
     int y = 0;//floorf(image.rows/5.);
     
-    cv::Rect leftEyeRect(0, y, width, height);
-    cv::Rect rightEyeRect(width, y, width, height);
+    cv::Rect leftEyeRect(width, y, width*2, height);
     
     cv::Mat leftEyeFrame = image(leftEyeRect);
+    
+    cv::equalizeHist(leftEyeFrame, leftEyeFrame);
+    
+    cv::Rect detectedFrame = [self detectEye: leftEyeFrame withClassifier: _openEyeClassifier];
+    
+    return detectedFrame != CVRectZero;
+}
+
+- (BOOL) rightEyeInImage: (const cv::Mat&) image {
+    int width = floorf(image.cols/4.);
+    int height = floorf(image.rows/2.);
+    int y = 0;//floorf(image.rows/5.);
+    
+    cv::Rect rightEyeRect(0, y, width*2, height);
+    
     cv::Mat rightEyeFrame = image(rightEyeRect);
     
     //Equalize the image -> what does it do...?
-    cv::Mat bothEyesFrame = image(cv::Rect(0, y, width*2, height));
-    cv::equalizeHist(bothEyesFrame, bothEyesFrame);
+    cv::equalizeHist(rightEyeFrame, rightEyeFrame);
     
-    int matchLimit = 1000000;
+    cv::Rect detectedFrame = [self detectEye: rightEyeFrame withClassifier: _openEyeClassifier];
     
-    if( self.leftEye ) {
-        EyeObject* obj = self.leftEye;
-        cv::Mat tpl = obj.capture;
-        
-        int result_rows = leftEyeFrame.rows - tpl.rows + 1;
-        int result_cols = leftEyeFrame.cols - tpl.cols + 1;
-       
-        
-        NSAssert(result_rows > 0 , @"leftEyeRect is narrower than the eye template");
-        NSAssert(result_cols > 0,  @"leftEyeRect is shorter than the eye template");
-        
-        cv::Mat dst(result_cols, result_rows, CV_32FC1);
-        cv::matchTemplate(leftEyeFrame, tpl, dst, CV_TM_SQDIFF);
-        
-        double minval, maxval;
-        cv::Point minloc, maxloc;
-        cv::minMaxLoc(dst, &minval, &maxval, &minloc, &maxloc);
-        
-        
-        if (minval <= matchLimit)
-        {
-            cv::Rect detectedFrame = cv::Rect(minloc.x,
-                                              minloc.y,
-                                              tpl.rows,
-                                              tpl.cols);
-            obj.bounds = detectedFrame;
-            obj.lostCount = 0;
-            leftEyeRect = detectedFrame;
-        }
-        else {
-            obj.lostCount++;
-            
-            if( obj.lostCount > 5 )
-                self.leftEye = nil;
-            else
-                leftEyeRect = obj.bounds;
-        }
-    }
-    
-    if(! self.leftEye ) {
-        cv::Rect detectedFrame = [self detectEye: leftEyeFrame withClassifier: _leftEyeClassifier];
-        
-        if( detectedFrame != CVRectZero ) {
-            
-            EyeObject* eyeObject = [EyeObject new];
-            
-            eyeObject.capture = leftEyeFrame(detectedFrame);
-            
-            self.leftEye = eyeObject;
-            
-            eyeObject.bounds = detectedFrame;
-            leftEyeRect = detectedFrame;
-        }
-    }
-    
-    if( self.rightEye ) {
-        EyeObject* obj = self.rightEye;
-        cv::Mat tpl = obj.capture;
-        
-        int result_rows = rightEyeFrame.rows - tpl.rows + 1;
-        int result_cols = rightEyeFrame.cols - tpl.cols + 1;
-        
-        NSAssert(result_rows > 0 , @"rightEyeRect is narrower than the eye template");
-        NSAssert(result_cols > 0,  @"rightEyeRect is shorter than the eye template");
-        
-        cv::Mat dst(result_rows, result_cols, CV_32FC1);
-        cv::matchTemplate(rightEyeFrame, tpl, dst, CV_TM_SQDIFF);
-        
-        double minval, maxval;
-        cv::Point minloc, maxloc;
-        cv::minMaxLoc(dst, &minval, &maxval, &minloc, &maxloc);
-        
-        if (minval <= matchLimit)
-        {
-            cv::Rect detectedFrame = cv::Rect(minloc.x,
-                                              minloc.y,
-                                              tpl.rows,
-                                              tpl.cols);
-            obj.bounds = detectedFrame;
-            obj.lostCount = 0;
-            rightEyeRect = detectedFrame;
-        }
-        else {
-            
-            obj.lostCount++;
-            
-            if( obj.lostCount > 5 )
-                self.rightEye = nil;
-            else {
-                rightEyeRect = obj.bounds;
-            }
-        }
-    }
-    
-    
-    if( !self.rightEye ) {
-        cv::Rect detectedFrame = [self detectEye: rightEyeFrame withClassifier: _rightEyeClassifier];
-        
-        if( detectedFrame != CVRectZero ) {
-            
-            rightEyeRect = detectedFrame;
-            EyeObject* eyeObject = [EyeObject new];
-            
-            eyeObject.capture = rightEyeFrame(detectedFrame);
-            
-            self.rightEye = eyeObject;
-            eyeObject.bounds = detectedFrame;
-        }
-    }
-    
-    NSMutableArray* results = [NSMutableArray new];
-    if( self.leftEye ) {
-        leftEyeRect.y += y;
-        
-        CGRect rect = CGRectMake(leftEyeRect.x, leftEyeRect.y, leftEyeRect.width, leftEyeRect.height);
-        [results addObject: [NSValue valueWithCGRect: rect]];
-    }
-    
-    if( self.rightEye ) {
-        rightEyeRect.x += width;
-        rightEyeRect.y += y;
-        
-        CGRect rect = CGRectMake(rightEyeRect.x, rightEyeRect.y, rightEyeRect.width, rightEyeRect.height);
-        [results addObject: [NSValue valueWithCGRect: rect]];
-    }
-    
-    return results;
+    return detectedFrame != CVRectZero;
 }
 
 @end

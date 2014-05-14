@@ -14,6 +14,19 @@
 		FD65CC9E192356E8004386C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65CC9D192356E8004386C7 /* main.m */; };
 		FD65CCA2192356E8004386C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65CCA1192356E8004386C7 /* AppDelegate.m */; };
 		FD65CCA4192356E8004386C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD65CCA3192356E8004386C7 /* Images.xcassets */; };
+		FDC35111192358ED00E6A17E /* UIFacialGestureRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDC35110192358ED00E6A17E /* UIFacialGestureRecognizer.mm */; };
+		FDC351131923598F00E6A17E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC351121923598F00E6A17E /* opencv2.framework */; };
+		FDC35118192362F700E6A17E /* FaceObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDC35115192362F700E6A17E /* FaceObject.mm */; };
+		FDC3511B192368E800E6A17E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC3511A192368E800E6A17E /* Storyboard.storyboard */; };
+		FDC3511E1923690700E6A17E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC3511D1923690700E6A17E /* GameViewController.m */; };
+		FDC3512019236A7500E6A17E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3511F19236A7500E6A17E /* AVFoundation.framework */; };
+		FDC3512219236A8100E6A17E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3512119236A8100E6A17E /* CoreMedia.framework */; };
+		FDC3512419236C8400E6A17E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3512319236C8400E6A17E /* AssetsLibrary.framework */; };
+		FDC3512719236CA200E6A17E /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = FDC3512519236CA200E6A17E /* haarcascade_lefteye_2splits.xml */; };
+		FDC3512819236CA200E6A17E /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = FDC3512619236CA200E6A17E /* haarcascade_righteye_2splits.xml */; };
+		FDC3512A1923729000E6A17E /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = FDC351291923728F00E6A17E /* haarcascade_eye_tree_eyeglasses.xml */; };
+		FDC3512D19241D9500E6A17E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC3512C19241D9500E6A17E /* MenuTableViewController.m */; };
+		FDC3513019241F5E00E6A17E /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC3512F19241F5E00E6A17E /* IntroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +42,24 @@
 		FD65CCA1192356E8004386C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FD65CCA3192356E8004386C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iScream/Images.xcassets; sourceTree = "<group>"; };
 		FD65CCAA192356E8004386C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FDC3510F192358ED00E6A17E /* UIFacialGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFacialGestureRecognizer.h; sourceTree = "<group>"; };
+		FDC35110192358ED00E6A17E /* UIFacialGestureRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UIFacialGestureRecognizer.mm; sourceTree = "<group>"; };
+		FDC351121923598F00E6A17E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		FDC35114192362F700E6A17E /* FaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceObject.h; sourceTree = "<group>"; };
+		FDC35115192362F700E6A17E /* FaceObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceObject.mm; sourceTree = "<group>"; };
+		FDC3511A192368E800E6A17E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = iScream/Storyboard.storyboard; sourceTree = "<group>"; };
+		FDC3511C1923690700E6A17E /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		FDC3511D1923690700E6A17E /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		FDC3511F19236A7500E6A17E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FDC3512119236A8100E6A17E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FDC3512319236C8400E6A17E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FDC3512519236CA200E6A17E /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
+		FDC3512619236CA200E6A17E /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
+		FDC351291923728F00E6A17E /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		FDC3512B19241D9500E6A17E /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		FDC3512C19241D9500E6A17E /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		FDC3512E19241F5E00E6A17E /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		FDC3512F19241F5E00E6A17E /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +67,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC3512419236C8400E6A17E /* AssetsLibrary.framework in Frameworks */,
+				FDC3512219236A8100E6A17E /* CoreMedia.framework in Frameworks */,
+				FDC3512019236A7500E6A17E /* AVFoundation.framework in Frameworks */,
 				FD65CC94192356E8004386C7 /* CoreGraphics.framework in Frameworks */,
 				FD65CC96192356E8004386C7 /* UIKit.framework in Frameworks */,
+				FDC351131923598F00E6A17E /* opencv2.framework in Frameworks */,
 				FD65CC92192356E8004386C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +101,10 @@
 		FD65CC90192356E8004386C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDC3512319236C8400E6A17E /* AssetsLibrary.framework */,
+				FDC3512119236A8100E6A17E /* CoreMedia.framework */,
+				FDC3511F19236A7500E6A17E /* AVFoundation.framework */,
+				FDC351121923598F00E6A17E /* opencv2.framework */,
 				FD65CC91192356E8004386C7 /* Foundation.framework */,
 				FD65CC93192356E8004386C7 /* CoreGraphics.framework */,
 				FD65CC95192356E8004386C7 /* UIKit.framework */,
@@ -92,6 +131,12 @@
 			children = (
 				FD65CCA0192356E8004386C7 /* AppDelegate.h */,
 				FD65CCA1192356E8004386C7 /* AppDelegate.m */,
+				FDC3511C1923690700E6A17E /* GameViewController.h */,
+				FDC3511D1923690700E6A17E /* GameViewController.m */,
+				FDC3512B19241D9500E6A17E /* MenuTableViewController.h */,
+				FDC3512C19241D9500E6A17E /* MenuTableViewController.m */,
+				FDC3512E19241F5E00E6A17E /* IntroViewController.h */,
+				FDC3512F19241F5E00E6A17E /* IntroViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +151,10 @@
 		FDC3510D192357E600E6A17E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDC35114192362F700E6A17E /* FaceObject.h */,
+				FDC35115192362F700E6A17E /* FaceObject.mm */,
+				FDC3510F192358ED00E6A17E /* UIFacialGestureRecognizer.h */,
+				FDC35110192358ED00E6A17E /* UIFacialGestureRecognizer.mm */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -113,9 +162,13 @@
 		FDC3510E1923580600E6A17E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDC351291923728F00E6A17E /* haarcascade_eye_tree_eyeglasses.xml */,
+				FDC3512519236CA200E6A17E /* haarcascade_lefteye_2splits.xml */,
+				FDC3512619236CA200E6A17E /* haarcascade_righteye_2splits.xml */,
 				FD65CCA3192356E8004386C7 /* Images.xcassets */,
 				FD65CC99192356E8004386C7 /* iScream-Info.plist */,
 				FD65CC9A192356E8004386C7 /* InfoPlist.strings */,
+				FDC3511A192368E800E6A17E /* Storyboard.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -148,6 +201,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Gilmert Bentley";
+				TargetAttributes = {
+					FD65CC8D192356E8004386C7 = {
+						DevelopmentTeam = SHLVY923BZ;
+					};
+				};
 			};
 			buildConfigurationList = FD65CC89192356E8004386C7 /* Build configuration list for PBXProject "iScream" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -173,6 +231,10 @@
 			files = (
 				FD65CC9C192356E8004386C7 /* InfoPlist.strings in Resources */,
 				FD65CCA4192356E8004386C7 /* Images.xcassets in Resources */,
+				FDC3512819236CA200E6A17E /* haarcascade_righteye_2splits.xml in Resources */,
+				FDC3511B192368E800E6A17E /* Storyboard.storyboard in Resources */,
+				FDC3512719236CA200E6A17E /* haarcascade_lefteye_2splits.xml in Resources */,
+				FDC3512A1923729000E6A17E /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +247,11 @@
 			files = (
 				FD65CCA2192356E8004386C7 /* AppDelegate.m in Sources */,
 				FD65CC9E192356E8004386C7 /* main.m in Sources */,
+				FDC35111192358ED00E6A17E /* UIFacialGestureRecognizer.mm in Sources */,
+				FDC3511E1923690700E6A17E /* GameViewController.m in Sources */,
+				FDC3512D19241D9500E6A17E /* MenuTableViewController.m in Sources */,
+				FDC35118192362F700E6A17E /* FaceObject.mm in Sources */,
+				FDC3513019241F5E00E6A17E /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +347,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
 				INFOPLIST_FILE = "iScream/iScream-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -293,10 +368,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
 				INFOPLIST_FILE = "iScream/iScream-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

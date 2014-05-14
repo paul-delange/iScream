@@ -18,6 +18,7 @@
 @property (assign) BOOL isFacingCamera;
 @property (assign) BOOL hasBeenCounted;
 
-- (NSArray*) eyesInImage: (const cv::Mat&) image;
+- (BOOL) leftEyeInImage: (const cv::Mat&) image;
+- (BOOL) rightEyeInImage: (const cv::Mat&) image;
 
 @end
