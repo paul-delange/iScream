@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70FFF7B7-95FC-44FD-8C17-7DEDBEFC9287</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Workspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8ACA28A0-82A6-4861-860D-F7A15CB1F966</key>
+		<string>https://github.com/paul-delange/iScream.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Workspace.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8ACA28A0-82A6-4861-860D-F7A15CB1F966</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/paul-delange/iScream.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8ACA28A0-82A6-4861-860D-F7A15CB1F966</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8ACA28A0-82A6-4861-860D-F7A15CB1F966</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iScream</string>
+		</dict>
+	</array>
+</dict>
+</plist>

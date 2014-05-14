@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD65CC92192356E8004386C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CC91192356E8004386C7 /* Foundation.framework */; };
+		FD65CC94192356E8004386C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CC93192356E8004386C7 /* CoreGraphics.framework */; };
+		FD65CC96192356E8004386C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CC95192356E8004386C7 /* UIKit.framework */; };
+		FD65CC9C192356E8004386C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD65CC9A192356E8004386C7 /* InfoPlist.strings */; };
+		FD65CC9E192356E8004386C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65CC9D192356E8004386C7 /* main.m */; };
+		FD65CCA2192356E8004386C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65CCA1192356E8004386C7 /* AppDelegate.m */; };
+		FD65CCA4192356E8004386C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD65CCA3192356E8004386C7 /* Images.xcassets */; };
+		FD65CCAB192356E8004386C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CCAA192356E8004386C7 /* XCTest.framework */; };
+		FD65CCAC192356E8004386C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CC91192356E8004386C7 /* Foundation.framework */; };
+		FD65CCAD192356E8004386C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD65CC95192356E8004386C7 /* UIKit.framework */; };
+		FD65CCB5192356E8004386C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD65CCB3192356E8004386C7 /* InfoPlist.strings */; };
+		FD65CCB7192356E8004386C7 /* iScreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD65CCB6192356E8004386C7 /* iScreamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD65CCAE192356E8004386C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD65CC86192356E8004386C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD65CC8D192356E8004386C7;
+			remoteInfo = iScream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD65CC8E192356E8004386C7 /* iScream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD65CC91192356E8004386C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FD65CC93192356E8004386C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FD65CC95192356E8004386C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FD65CC99192356E8004386C7 /* iScream-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iScream-Info.plist"; sourceTree = "<group>"; };
+		FD65CC9B192356E8004386C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD65CC9D192356E8004386C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD65CC9F192356E8004386C7 /* iScream-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iScream-Prefix.pch"; sourceTree = "<group>"; };
+		FD65CCA0192356E8004386C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD65CCA1192356E8004386C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD65CCA3192356E8004386C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD65CCA9192356E8004386C7 /* iScreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iScreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD65CCAA192356E8004386C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FD65CCB2192356E8004386C7 /* iScreamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iScreamTests-Info.plist"; sourceTree = "<group>"; };
+		FD65CCB4192356E8004386C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD65CCB6192356E8004386C7 /* iScreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iScreamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD65CC8B192356E8004386C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CC94192356E8004386C7 /* CoreGraphics.framework in Frameworks */,
+				FD65CC96192356E8004386C7 /* UIKit.framework in Frameworks */,
+				FD65CC92192356E8004386C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD65CCA6192356E8004386C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CCAB192356E8004386C7 /* XCTest.framework in Frameworks */,
+				FD65CCAD192356E8004386C7 /* UIKit.framework in Frameworks */,
+				FD65CCAC192356E8004386C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD65CC85192356E8004386C7 = {
+			isa = PBXGroup;
+			children = (
+				FD65CC97192356E8004386C7 /* iScream */,
+				FD65CCB0192356E8004386C7 /* iScreamTests */,
+				FD65CC90192356E8004386C7 /* Frameworks */,
+				FD65CC8F192356E8004386C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD65CC8F192356E8004386C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CC8E192356E8004386C7 /* iScream.app */,
+				FD65CCA9192356E8004386C7 /* iScreamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD65CC90192356E8004386C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CC91192356E8004386C7 /* Foundation.framework */,
+				FD65CC93192356E8004386C7 /* CoreGraphics.framework */,
+				FD65CC95192356E8004386C7 /* UIKit.framework */,
+				FD65CCAA192356E8004386C7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD65CC97192356E8004386C7 /* iScream */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CCA0192356E8004386C7 /* AppDelegate.h */,
+				FD65CCA1192356E8004386C7 /* AppDelegate.m */,
+				FD65CCA3192356E8004386C7 /* Images.xcassets */,
+				FD65CC98192356E8004386C7 /* Supporting Files */,
+			);
+			path = iScream;
+			sourceTree = "<group>";
+		};
+		FD65CC98192356E8004386C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CC99192356E8004386C7 /* iScream-Info.plist */,
+				FD65CC9A192356E8004386C7 /* InfoPlist.strings */,
+				FD65CC9D192356E8004386C7 /* main.m */,
+				FD65CC9F192356E8004386C7 /* iScream-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD65CCB0192356E8004386C7 /* iScreamTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CCB6192356E8004386C7 /* iScreamTests.m */,
+				FD65CCB1192356E8004386C7 /* Supporting Files */,
+			);
+			path = iScreamTests;
+			sourceTree = "<group>";
+		};
+		FD65CCB1192356E8004386C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD65CCB2192356E8004386C7 /* iScreamTests-Info.plist */,
+				FD65CCB3192356E8004386C7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD65CC8D192356E8004386C7 /* iScream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD65CCBA192356E8004386C7 /* Build configuration list for PBXNativeTarget "iScream" */;
+			buildPhases = (
+				FD65CC8A192356E8004386C7 /* Sources */,
+				FD65CC8B192356E8004386C7 /* Frameworks */,
+				FD65CC8C192356E8004386C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iScream;
+			productName = iScream;
+			productReference = FD65CC8E192356E8004386C7 /* iScream.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD65CCA8192356E8004386C7 /* iScreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD65CCBD192356E8004386C7 /* Build configuration list for PBXNativeTarget "iScreamTests" */;
+			buildPhases = (
+				FD65CCA5192356E8004386C7 /* Sources */,
+				FD65CCA6192356E8004386C7 /* Frameworks */,
+				FD65CCA7192356E8004386C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD65CCAF192356E8004386C7 /* PBXTargetDependency */,
+			);
+			name = iScreamTests;
+			productName = iScreamTests;
+			productReference = FD65CCA9192356E8004386C7 /* iScreamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD65CC86192356E8004386C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Gilmert Bentley";
+				TargetAttributes = {
+					FD65CCA8192356E8004386C7 = {
+						TestTargetID = FD65CC8D192356E8004386C7;
+					};
+				};
+			};
+			buildConfigurationList = FD65CC89192356E8004386C7 /* Build configuration list for PBXProject "iScream" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD65CC85192356E8004386C7;
+			productRefGroup = FD65CC8F192356E8004386C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD65CC8D192356E8004386C7 /* iScream */,
+				FD65CCA8192356E8004386C7 /* iScreamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD65CC8C192356E8004386C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CC9C192356E8004386C7 /* InfoPlist.strings in Resources */,
+				FD65CCA4192356E8004386C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD65CCA7192356E8004386C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CCB5192356E8004386C7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD65CC8A192356E8004386C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CCA2192356E8004386C7 /* AppDelegate.m in Sources */,
+				FD65CC9E192356E8004386C7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD65CCA5192356E8004386C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD65CCB7192356E8004386C7 /* iScreamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD65CCAF192356E8004386C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD65CC8D192356E8004386C7 /* iScream */;
+			targetProxy = FD65CCAE192356E8004386C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD65CC9A192356E8004386C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD65CC9B192356E8004386C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FD65CCB3192356E8004386C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD65CCB4192356E8004386C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD65CCB8192356E8004386C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FD65CCB9192356E8004386C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD65CCBB192356E8004386C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
+				INFOPLIST_FILE = "iScream/iScream-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FD65CCBC192356E8004386C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
+				INFOPLIST_FILE = "iScream/iScream-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FD65CCBE192356E8004386C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iScream.app/iScream";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iScreamTests/iScreamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FD65CCBF192356E8004386C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iScream.app/iScream";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iScream/iScream-Prefix.pch";
+				INFOPLIST_FILE = "iScreamTests/iScreamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD65CC89192356E8004386C7 /* Build configuration list for PBXProject "iScream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD65CCB8192356E8004386C7 /* Debug */,
+				FD65CCB9192356E8004386C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD65CCBA192356E8004386C7 /* Build configuration list for PBXNativeTarget "iScream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD65CCBB192356E8004386C7 /* Debug */,
+				FD65CCBC192356E8004386C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD65CCBD192356E8004386C7 /* Build configuration list for PBXNativeTarget "iScreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD65CCBE192356E8004386C7 /* Debug */,
+				FD65CCBF192356E8004386C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD65CC86192356E8004386C7 /* Project object */;
+}
