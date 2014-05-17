@@ -89,11 +89,6 @@ static CGImageRef CGImageCreateFromOpenCVMatrix(const cv::Mat& cvMat) {
 
 @implementation UIFacialGestureRecognizer
 
-- (BOOL) hasUsersAttention {
-    return (self.state == UIGestureRecognizerStatePossible ||
-            self.state == UIGestureRecognizerStateRecognized );
-}
-
 - (void) start {
     NSParameterAssert(![_captureSession isRunning]);
     
@@ -339,7 +334,7 @@ static CGImageRef CGImageCreateFromOpenCVMatrix(const cv::Mat& cvMat) {
             _hasRightEye = [biggestFace rightEyeInImage: faceFrame];
             
             if( _hasRightEye || _hasLeftEye ) {
-                //NSLog(@"R: %d | %d", _hasLeftEye, _hasRightEye);
+                NSLog(@"R: %d | %d", _hasLeftEye, _hasRightEye);
                 
                 if( self.state == UIGestureRecognizerStatePossible ) {
                     self.state = UIGestureRecognizerStateRecognized;
