@@ -18,7 +18,6 @@
 		FDC351131923598F00E6A17E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC351121923598F00E6A17E /* opencv2.framework */; };
 		FDC35118192362F700E6A17E /* FaceObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = FDC35115192362F700E6A17E /* FaceObject.mm */; };
 		FDC3511B192368E800E6A17E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC3511A192368E800E6A17E /* Storyboard.storyboard */; };
-		FDC3511E1923690700E6A17E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC3511D1923690700E6A17E /* GameViewController.m */; };
 		FDC3512019236A7500E6A17E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3511F19236A7500E6A17E /* AVFoundation.framework */; };
 		FDC3512219236A8100E6A17E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3512119236A8100E6A17E /* CoreMedia.framework */; };
 		FDC3512419236C8400E6A17E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC3512319236C8400E6A17E /* AssetsLibrary.framework */; };
@@ -48,8 +47,6 @@
 		FDC35114192362F700E6A17E /* FaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceObject.h; sourceTree = "<group>"; };
 		FDC35115192362F700E6A17E /* FaceObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceObject.mm; sourceTree = "<group>"; };
 		FDC3511A192368E800E6A17E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = iScream/Storyboard.storyboard; sourceTree = "<group>"; };
-		FDC3511C1923690700E6A17E /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		FDC3511D1923690700E6A17E /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		FDC3511F19236A7500E6A17E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FDC3512119236A8100E6A17E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		FDC3512319236C8400E6A17E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -131,8 +128,6 @@
 			children = (
 				FD65CCA0192356E8004386C7 /* AppDelegate.h */,
 				FD65CCA1192356E8004386C7 /* AppDelegate.m */,
-				FDC3511C1923690700E6A17E /* GameViewController.h */,
-				FDC3511D1923690700E6A17E /* GameViewController.m */,
 				FDC3512B19241D9500E6A17E /* MenuTableViewController.h */,
 				FDC3512C19241D9500E6A17E /* MenuTableViewController.m */,
 				FDC3512E19241F5E00E6A17E /* IntroViewController.h */,
@@ -248,7 +243,6 @@
 				FD65CCA2192356E8004386C7 /* AppDelegate.m in Sources */,
 				FD65CC9E192356E8004386C7 /* main.m in Sources */,
 				FDC35111192358ED00E6A17E /* UIFacialGestureRecognizer.mm in Sources */,
-				FDC3511E1923690700E6A17E /* GameViewController.m in Sources */,
 				FDC3512D19241D9500E6A17E /* MenuTableViewController.m in Sources */,
 				FDC35118192362F700E6A17E /* FaceObject.mm in Sources */,
 				FDC3513019241F5E00E6A17E /* IntroViewController.m in Sources */,
